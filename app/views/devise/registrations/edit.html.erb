@@ -13,6 +13,15 @@
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
     </div>
+  <div class="form-group">
+    <%= f.label :website %>
+    <%= f.text_field :website, :autofocus => true, class: 'form-control'  %>
+    </div>
+
+   <div class="form-group">
+      <%= f.label :bio %>
+     <%= f.text_area :bio, :autofocus => true, class: 'form-control'  %>
+    </div>
     <fieldset>
       <p>Leave these fields blank if you don't want to change your password.</p>
       <div class="form-group">
