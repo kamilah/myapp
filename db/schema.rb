@@ -11,15 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140901023019) do
+ActiveRecord::Schema.define(version: 20140909043043) do
 
   create_table "posts", force: true do |t|
-    t.integer  "user_id"
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "user_friendships", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_friendships", ["user_id", "friend_id"], name: "index_user_friendships_on_user_id_and_friend_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -50,6 +58,7 @@ ActiveRecord::Schema.define(version: 20140901023019) do
     t.integer  "invitations_count",      default: 0
     t.text     "bio"
     t.string   "website"
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

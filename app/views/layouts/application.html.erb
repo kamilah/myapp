@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Myapp" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Myapp" %>">
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "The League of Merchants" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -12,9 +12,32 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    <main role="main">
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">C O M M U N I T Y<span class="glyphicon glyphicon-chevron-right"></span>
+</a></li>
+            <li><a href="#">B U L L E T I N<span class="glyphicon glyphicon-chevron-right"></span></a></li>
+            <li><a href="#">R E S O U R C E S<span class="glyphicon glyphicon-chevron-right"></span></a></li>
+            <li><a href="#">M E R C H A N T <sp> U</sp><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+          </ul>
+         
+        </div>
+  	
+        <!-- main area -->
+       <main role="main">
+      <div class="container-fluid">
+      <div class="row">
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          
        <%= render 'layouts/messages' %>
-       <%= yield %>
+      <%= yield %>
+       
+      </div>
+        </div>
+      </div>
     </main>
+
   </body>
 </html>

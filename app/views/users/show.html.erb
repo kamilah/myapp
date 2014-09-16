@@ -1,8 +1,13 @@
-    <h1>Your Merchant Profile</h1>
-        
+<div class="profile-container">
+        <div align="center">
+          
+          <%= image_tag(@user.avatar.large_avatar)%><br>
 <p><%= @user.name if @user.name %></p>
 <p><%= @user.email if @user.email %></p>
 <% if @user.website.present? %>
 <%= link_to @user.website, @user.website %>
 <% end %>
 <p><%= @user.bio if @user.bio %></p>
+
+ </div>
+</div>

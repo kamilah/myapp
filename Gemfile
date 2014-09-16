@@ -15,6 +15,12 @@ gem 'devise'
 gem 'devise_invitable'
 gem 'pundit'
 gem 'simple_form'
+gem 'font-awesome-rails'
+gem 'carrierwave'
+gem 'mini_magick'
+group :test do
+  gem 'shoulda-matchers'
+end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -24,4 +30,5 @@ group :development do
 end
 group :development, :test do
   gem 'thin'
+  gem 'rspec-rails', '~>3.0.0'
 end

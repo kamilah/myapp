@@ -1,0 +1,10 @@
+html, body, .profile-container {
+    height: 100%;
+}
+.profile-container {
+    display: table;
+    vertical-align: middle;
+    padding-top: 30px;
+  max-width: 400px;
+  margin: 0 auto;  
+}
